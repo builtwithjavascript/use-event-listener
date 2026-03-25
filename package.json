@@ -1,6 +1,6 @@
 {
   "name": "@builtwithjavascript/use-event-listener",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Exposes hook useEventListener to make it easier to use EventListener.",
   "author": "builtwithjavascript",
   "license": "MIT",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build-types": "tsc src/index.ts --esModuleInterop --declaration --emitDeclarationOnly --outDir dist",
+    "build-types": "tsc -p tsconfig.dts.json",
     "build": "tsc --esModuleInterop && vite build && npm run build-types",
     "pub": "npm publish --access public",
     "test": "TESTING=true vitest run",
@@ -30,14 +30,14 @@
     "postversion": "git push"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
-    "jsdom": "^24.0.0",
-    "prettier": "^3.2.5",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "jsdom": "^29.0.1",
+    "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.10",
-    "vitest": "^1.5.0"
+    "typescript": "^6.0.2",
+    "vite": "^8.0.2",
+    "vitest": "^4.1.1"
   },
   "files": [
     "dist"
